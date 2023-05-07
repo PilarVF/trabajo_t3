@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+#contenedorPadre {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedor {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    border-color: darkmagenta;
+    border-style: double;
+    border-width: 1px;
+    background-color: lightyellow;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cuadrito {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-color: black;
+    border-style: double;
+    border-width: 1px;
+    background-color: white;
+}
