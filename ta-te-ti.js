@@ -1,3 +1,7 @@
+/* María del Pilar Vaquero Fernández
+   Mayo de 2023
+   Trabajo del Tercer Trimestre de la asignatura Lenguajes de Marcas */
+
 'use strict';
 
 // Función que sirve para que una casilla cambie a color gris claro al poner sobre ella el cursor del ratón:

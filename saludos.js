@@ -1,3 +1,7 @@
+/* María del Pilar Vaquero Fernández
+   Mayo de 2023
+   Trabajo del Tercer Trimestre de la asignatura Lenguajes de Marcas */
+
 'use strict';
 
 // Variable que usamos para pintar los saludos:
