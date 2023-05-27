@@ -7,11 +7,11 @@
 // Variable que usamos para pintar los saludos:
 var colorfuente = "white"
 
-// Array con colores, tipo constante, para definir los colores de los cuadritos: 
+// Array con colores, tipo constante, para definir los colores de los cuadrados: 
 const colores = [];
 colores[0] = "rgb(250, 78, 78)";
 colores[1] = "rgb(68, 160, 252)";
-colores[2] = "rgb(236, 236, 198)";
+colores[2] = "rgb(204, 204, 180)";
 colores[3] = "rgb(32, 206, 32)";
 colores[4] = "rgb(254, 254, 40)";
 
@@ -32,7 +32,7 @@ function pintar() {
     }
 }
 
-// Función que sirve para pintar un cuadrito:
+// Función que sirve para pintar un cuadrado:
 function rellenar(identificador, colorfondo) {
     let elem = document.getElementById(identificador);
     elem.style.backgroundColor = colorfondo;

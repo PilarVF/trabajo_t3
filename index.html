@@ -11,32 +11,68 @@ Trabajo del Tercer Trimestre de la asignatura Lenguajes de Marcas
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de inicio</title>
-    <style>
-        #boton {
-            margin-left: 1.7%;
-        }
-
-        h2 {
-            padding-left: 1%;
-            padding-bottom: 1%;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css"/>
 </head>
 
-<body>
-    <h2><b>MENÚ</b></h2>
+<body id="todo">
+    <!-- Menú -->
+    <nav>
+        <a class="activo" href="./index.html">Inicio</a>
+        <a href="./saludos.html">Saludos</a>
+        <a href="./ta-te-ti.html">TA-TE-TI</a>
+        <a href="./nyc.html">NYC</a>
+        <a href="./ajustes.html">Ajustes</a>
+        <a class="boton" href="#mostrar-modal">+INFO</a>
+    </nav>
 
-    <ul>
-        <li><a href="./ta-te-ti.html">Tres en Raya (TA-TE-TI)</a></li>
-        <br />
-        <li><a href="./saludos.html">Saludos</a></li>
-        <br />
-    </ul>
+    <!-- Ventana modal -->
+    <div id="mostrar-modal" class="ventanaModal">
+        <div>
+            <div>
+                <p><b>Alumna: </b>María del Pilar Vaquero Fernández</p>
+                <p><b>Curso: </b>1º DAM</p>
+                <p><b>Información sobre el proyecto: </b></p>
+                <p>Sitio web que consta de cinco páginas: Inicio, Saludos,
+                    TA-TE-TI, NYC y Ajustes. En todas ellas, arriba a la derecha, aparece un emoticono para cambiar a
+                    modo "día" (sol) o "noche" (luna). El modo seleccionado se mantiene al recargar la página.</p>
+                <p>Las páginas Saludos y TA-TE-TI contienen ejercicios que hemos realizado durante el tercer trimestre
+                    del curso.</p>
+                <p>En la página NYC, debajo del vídeo de Frank Sinatra, hay un enlace que lleva a un XML que contiene la
+                    letra de la canción "New York, New York".</p>
+                <p>Por último, en la página Ajustes, se puede introducir un nombre de usuario y guardarlo. Al hacerlo,
+                    en lugar de "Sin identificar", aparecerá debajo del menú, en todas las páginas, un saludo con ese
+                    nombre que permanecerá mientras siga abierta la sesión.</p>
+            </div>
 
-<!-- Botón: Al darle a este botón, aparece un mensaje con información referente a la alumna y su proyecto final -->
-    <button id="boton" onclick="alert('Nombre: María del Pilar Vaquero Fernández\nCurso: 1º DAM\nTema de Proyecto Final: Lugares emblemáticos del mundo');">
-        Más información
-    </button>
+            <a class="cerrar-modal" href="">CERRAR</a>
+        </div>
+    </div>
+
+    <!-- Modos Día y Noche -->
+    <div id="zonaModo">
+        <p id="noche" onclick="ponerModoNoche()">🌜</p>
+        <p id="dia" onclick="ponerModoDia()">🌞</p>
+    </div>
+
+    <script src="./dia-noche.js"></script>
+
+    <!-- Nombre usuario -->
+    <div id="usuario">Sin identificar</div>
+
+    <script src="formulario.js"></script>
+
+    <!-- Contenido de la página -->
+    <div id="inicio">
+        <br/>
+        <h2>¡Bienvenid@s a mi rinconcito virtual!</h2>
+        <br/>
+        <p>Aquí os hablaré sobre algunos de los lugares mas emblemáticos del mundo.</p>
+    </div>
+    <br/>
+
+    <div id="contenedorImagenViajes">
+        <img id="imagenViajes" src="./imagenes/viajes.jpg"/>
+    </div>
 </body>
 
 </html>

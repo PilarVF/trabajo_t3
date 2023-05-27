@@ -9,15 +9,15 @@ function ponerRaton(id) {
     document.getElementById(id).style.backgroundColor = "rgb(244, 246, 246)";
 }
 
-// Función que sirve para que una casilla vuelva a su color original (blanco) al apartar de ella el cursor del ratón:
+// Función que sirve para que una casilla vuelva a su color original (transparente) al apartar de ella el cursor del ratón:
 function quitarRaton(id) {
-    document.getElementById(id).style.backgroundColor = "white";
+    document.getElementById(id).style.backgroundColor = "transparent";
 }
 
 let turno = 0; // Turno de la partida
 
-const gato = '😸'; // Emoticono de gato para Jugador 1
-const perro = '🐶'; // Emoticono de perro para Jugador 2
+const nyc = '🗽'; // Emoticono de la Estatua de la Libertad para Jugador 1
+const japon = '🏯'; // Emoticono de un castillo japonés para Jugador 2
 
 // Combinaciones ganadoras:
 var paraGanar = [[0, 1, 2], [3, 4, 5], [6, 7, 8], // En horizontal
@@ -30,7 +30,7 @@ const posicion_btn = document.querySelectorAll(".cuadrito"); // Posición del ta
 // Función que sirve para colocar un emoticono en una casilla al hacer click en ella:
 function clicar(id) {
     turno++;
-    const emoticono = turno % 2 ? gato : perro; // Cuando el turno es impar, coloca el emoticono de gato. Cuando es par, el de perro.
+    const emoticono = turno % 2 ? nyc : japon; // Cuando el turno es impar, coloca el emoticono de la estatua. Cuando es par, el del castillo.
     let elemento = document.getElementById(id);
     elemento.innerHTML = emoticono;
     verificar();
@@ -39,14 +39,14 @@ function clicar(id) {
 // Función que sirve para recorrer el array de combinaciones ganadoras y verificar si esas posiciones del tablero contienen el mismo emoticono:
 function verificar() {
     for (var i = 0; i < paraGanar.length; i++) {
-        if (posicion_btn[paraGanar[i][0]].innerHTML == gato && posicion_btn[paraGanar[i][1]].innerHTML == gato && 
-            posicion_btn[paraGanar[i][2]].innerHTML == gato) {
-            alert('Ganador: 😸');
+        if (posicion_btn[paraGanar[i][0]].innerHTML == nyc && posicion_btn[paraGanar[i][1]].innerHTML == nyc && 
+            posicion_btn[paraGanar[i][2]].innerHTML == nyc) {
+            alert('Ganador: 🗽');
             reiniciar();
             return;
-        } else if (posicion_btn[paraGanar[i][0]].innerHTML == perro && posicion_btn[paraGanar[i][1]].innerHTML == perro && 
-                   posicion_btn[paraGanar[i][2]].innerHTML == perro) {
-            alert('Ganador: 🐶');
+        } else if (posicion_btn[paraGanar[i][0]].innerHTML == japon && posicion_btn[paraGanar[i][1]].innerHTML == japon && 
+                   posicion_btn[paraGanar[i][2]].innerHTML == japon) {
+            alert('Ganador: 🏯');
             reiniciar();
             return;
         }

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+María del Pilar Vaquero Fernández
+Mayo de 2023
+Trabajo del Tercer Trimestre de la asignatura Lenguajes de Marcas
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva York</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+
+<body id="todo">
+    <!-- Menú -->
+    <nav>
+        <a href="./index.html">Inicio</a>
+        <a href="./saludos.html">Saludos</a>
+        <a href="./ta-te-ti.html">TA-TE-TI</a>
+        <a class="activo" href="./nyc.html">NYC</a>
+        <a href="./ajustes.html">Ajustes</a>
+        <a class="boton" href="#mostrar-modal">+INFO</a>
+    </nav>
+
+    <!-- Ventana modal -->
+    <div id="mostrar-modal" class="ventanaModal">
+        <div>
+            <div>
+                <p><b>Alumna: </b>María del Pilar Vaquero Fernández</p>
+                <p><b>Curso: </b>1º DAM</p>
+                <p><b>Información sobre el proyecto: </b></p>
+                <p>Sitio web que consta de cinco páginas: Inicio, Saludos,
+                    TA-TE-TI, NYC y Ajustes. En todas ellas, arriba a la derecha, aparece un emoticono para cambiar a
+                    modo "día" (sol) o "noche" (luna). El modo seleccionado se mantiene al recargar la página.</p>
+                <p>Las páginas Saludos y TA-TE-TI contienen ejercicios que hemos realizado durante el tercer trimestre
+                    del curso.</p>
+                <p>En la página NYC, debajo del vídeo de Frank Sinatra, hay un enlace que lleva a un XML que contiene la
+                    letra de la canción "New York, New York".</p>
+                <p>Por último, en la página Ajustes, se puede introducir un nombre de usuario y guardarlo. Al hacerlo,
+                    en lugar de "Sin identificar", aparecerá debajo del menú, en todas las páginas, un saludo con ese
+                    nombre que permanecerá mientras siga abierta la sesión.</p>
+            </div>
+
+            <a class="cerrar-modal" href="">CERRAR</a>
+        </div>
+    </div>
+
+    <!-- Modos Día y Noche -->
+    <div id="zonaModo">
+        <p id="noche" onclick="ponerModoNoche()">🌜</p>
+        <p id="dia" onclick="ponerModoDia()">🌞</p>
+    </div>
+
+    <script src="./dia-noche.js"></script>
+
+    <!-- Nombre usuario -->
+    <div id="usuario">Sin identificar</div>
+
+    <script src="formulario.js"></script>
+    <br/>
+
+    <!-- Contenido de la página -->
+    <div id="lugaresNY">
+        <br/>
+        <h1 id="h1nyc">Los 10 lugares imprescindibles que hay que visitar en Nueva York</h1>
+        <br/>
+
+        <div id="contenedorImagenNYC">
+            <img id="imagenNYC" src="./imagenes/nyc.jpg"/>
+        </div>
+        <br/>
+
+        <ul>
+            <li>
+                <b>La Estatua de la Libertad: </b>Sin duda, es uno de los símbolos más representativos de Nueva York y
+                todo Estados Unidos. Se puede tomar un ferry desde Manhattan o Nueva Jersey y disfrutar de la vista de
+                la ciudad desde el barco.
+            </li>
+            <br/>
+            <li>
+                <b>El Empire State Building: </b>Este edificio es un clásico de Nueva York y ofrece una vista
+                espectacular de la ciudad desde su mirador en el piso 86. Vale la pena visitarlo tanto de día como de
+                noche.
+            </li>
+            <br/>
+            <li>
+                <b>Times Square: </b>El corazón de la ciudad que nunca duerme. Este lugar es conocido por sus
+                impresionantes anuncios luminosos y su ambiente lleno de vida, siempre hay algo que hacer o ver aquí.
+            </li>
+            <br/>
+            <li>
+                <b>Central Park: </b>El oasis verde en medio de la ciudad. Este parque es ideal para relajarse,
+                disfrutar del sol y hacer un picnic. Además, cuenta con muchas atracciones como el zoológico y el lago.
+            </li>
+            <br/>
+            <li>
+                <b>El Puente de Brooklyn: </b>Este icónico puente ofrece una vista increíble de la ciudad desde el río
+                Este. Caminar por el puente es una experiencia inolvidable y una excelente oportunidad para tomar fotos
+                impresionantes.
+            </li>
+            <br/>
+            <li>
+                <b>La Quinta Avenida: </b>La calle comercial más famosa y lujosa de Nueva York. Aquí se encuentran
+                tiendas exclusivas como Tiffany & Co. y Cartier, así como edificios emblemáticos como el Rockefeller
+                Center y el Flatiron Building.
+            </li>
+            <br/>
+            <li>
+                <b>El Metropolitan Museum of Art: </b>Uno de los museos de arte más grandes y famosos del mundo. Aquí se
+                puede admirar una impresionante colección de obras de arte de todo el mundo que abarca desde la
+                antigüedad hasta la actualidad.
+            </li>
+            <br/>
+            <li>
+                <b>El One World Trade Center: </b>El edificio más alto del hemisferio occidental. Ofrece una vista
+                impresionante de la ciudad desde su observatorio en el piso 100. Además, es una muestra de resiliencia y
+                memoria del 11 de septiembre de 2001.
+            </li>
+            <br/>
+            <li>
+                <b>El Museo Americano de Historia Natural: </b>Un lugar muy interesante para toda la familia. Este museo
+                cuenta con una impresionante colección de esqueletos de animales, fósiles e historia de los dinosaurios.
+            </li>
+            <br/>
+            <li>
+                <b>La High Line: </b>Un parque elevado que se encuentra sobre las vías del tren anteriormente
+                abandonadas. Se puede caminar por este parque y disfrutar de la vista de la ciudad y sus alrededores.
+            </li>
+        </ul>
+        <br/>
+
+        <p id="fraseFinal">Visitar estos lugares es una experiencia única e inolvidable que no te puedes perder al
+            visitar la ciudad
+            de Nueva York 😊.</p>
+    </div>
+    <br/>
+
+    <div id="videoSinatra">
+        <video controls autoplay muted>
+            <source src="./videos/Frank Sinatra - New York , New York (Live At Budokan Hall, Tokyo, 1985).mp4"
+                type="video/mp4">
+        </video>
+    </div>
+
+    <div id="contenedorCancion">
+        <a id="cancionSinatra" href="./newyork.xml"><u>PINCHA AQUÍ PARA VER LA LETRA DE LA CANCIÓN</u></a>
+    </div>
+</body>
+
+</html>

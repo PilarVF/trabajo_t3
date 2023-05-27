@@ -1,0 +1,17 @@
+/* María del Pilar Vaquero Fernández
+   Mayo de 2023
+   Trabajo del Tercer Trimestre de la asignatura Lenguajes de Marcas */
+
+body {
+    counter-reset: estrofa;
+}
+
+span::before {
+    counter-increment: estrofa;
+    content: "ESTROFA " counter(estrofa) ": ";
+}
+
+span {
+    background-color: lightblue;
+    font-weight: bold;
+}

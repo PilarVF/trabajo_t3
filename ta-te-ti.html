@@ -10,29 +10,85 @@ Trabajo del Tercer Trimestre de la asignatura Lenguajes de Marcas
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./ta-te-ti.css"/>
+    <link rel="stylesheet" href="./style.css"/>
     <title>Tres en Raya (TA-TE-TI)</title>
 </head>
 
-<body>
+<body id="todo">
+    <!-- Menú -->
+    <nav>
+        <a href="./index.html">Inicio</a>
+        <a href="./saludos.html">Saludos</a>
+        <a class="activo" href="./ta-te-ti.html">TA-TE-TI</a>
+        <a href="./nyc.html">NYC</a>
+        <a href="./ajustes.html">Ajustes</a>
+        <a class="boton" href="#mostrar-modal">+INFO</a>
+    </nav>
+
+    <!-- Ventana modal -->
+    <div id="mostrar-modal" class="ventanaModal">
+        <div>
+            <div>
+                <p><b>Alumna: </b>María del Pilar Vaquero Fernández</p>
+                <p><b>Curso: </b>1º DAM</p>
+                <p><b>Información sobre el proyecto: </b></p>
+                <p>Sitio web que consta de cinco páginas: Inicio, Saludos,
+                    TA-TE-TI, NYC y Ajustes. En todas ellas, arriba a la derecha, aparece un emoticono para cambiar a
+                    modo "día" (sol) o "noche" (luna). El modo seleccionado se mantiene al recargar la página.</p>
+                <p>Las páginas Saludos y TA-TE-TI contienen ejercicios que hemos realizado durante el tercer trimestre
+                    del curso.</p>
+                <p>En la página NYC, debajo del vídeo de Frank Sinatra, hay un enlace que lleva a un XML que contiene la
+                    letra de la canción "New York, New York".</p>
+                <p>Por último, en la página Ajustes, se puede introducir un nombre de usuario y guardarlo. Al hacerlo,
+                    en lugar de "Sin identificar", aparecerá debajo del menú, en todas las páginas, un saludo con ese
+                    nombre que permanecerá mientras siga abierta la sesión.</p>
+            </div>
+
+            <a class="cerrar-modal" href="">CERRAR</a>
+        </div>
+    </div>
+
+    <!-- Modos Día y Noche -->
+    <div id="zonaModo">
+        <p id="noche" onclick="ponerModoNoche()">🌜</p>
+        <p id="dia" onclick="ponerModoDia()">🌞</p>
+    </div>
+
+    <script src="./dia-noche.js"></script>
+
+    <!-- Nombre usuario -->
+    <div id="usuario">Sin identificar</div>
+
+    <script src="formulario.js"></script>
+
+    <!-- Juego Tres en Raya -->
     <div id="contenedorPadre">
-        <div id="contenedor"> <!-- Cuadrado con el borde magenta oscuro -->
+        <div id="contenedor">
             <div class="fila" id="fila1">
-                <div class="cuadrito" id="c1" onmouseenter="ponerRaton('c1')" onmouseleave="quitarRaton('c1')" onclick="clicar('c1')"></div>
-                <div class="cuadrito" id="c2" onmouseenter="ponerRaton('c2')" onmouseleave="quitarRaton('c2')" onclick="clicar('c2')"></div>
-                <div class="cuadrito" id="c3" onmouseenter="ponerRaton('c3')" onmouseleave="quitarRaton('c3')" onclick="clicar('c3')"></div>
+                <div class="cuadrito" id="c1" onmouseenter="ponerRaton('c1')" onmouseleave="quitarRaton('c1')"
+                    onclick="clicar('c1')"></div>
+                <div class="cuadrito" id="c2" onmouseenter="ponerRaton('c2')" onmouseleave="quitarRaton('c2')"
+                    onclick="clicar('c2')"></div>
+                <div class="cuadrito" id="c3" onmouseenter="ponerRaton('c3')" onmouseleave="quitarRaton('c3')"
+                    onclick="clicar('c3')"></div>
             </div>
 
             <div class="fila" id="fila2">
-                <div class="cuadrito" id="c4" onmouseenter="ponerRaton('c4')" onmouseleave="quitarRaton('c4')" onclick="clicar('c4')"></div>
-                <div class="cuadrito" id="c5" onmouseenter="ponerRaton('c5')" onmouseleave="quitarRaton('c5')" onclick="clicar('c5')"></div>
-                <div class="cuadrito" id="c6" onmouseenter="ponerRaton('c6')" onmouseleave="quitarRaton('c6')" onclick="clicar('c6')"></div>
+                <div class="cuadrito" id="c4" onmouseenter="ponerRaton('c4')" onmouseleave="quitarRaton('c4')"
+                    onclick="clicar('c4')"></div>
+                <div class="cuadrito" id="c5" onmouseenter="ponerRaton('c5')" onmouseleave="quitarRaton('c5')"
+                    onclick="clicar('c5')"></div>
+                <div class="cuadrito" id="c6" onmouseenter="ponerRaton('c6')" onmouseleave="quitarRaton('c6')"
+                    onclick="clicar('c6')"></div>
             </div>
 
             <div class="fila" id="fila3">
-                <div class="cuadrito" id="c7" onmouseenter="ponerRaton('c7')" onmouseleave="quitarRaton('c7')" onclick="clicar('c7')"></div>
-                <div class="cuadrito" id="c8" onmouseenter="ponerRaton('c8')" onmouseleave="quitarRaton('c8')" onclick="clicar('c8')"></div>
-                <div class="cuadrito" id="c9" onmouseenter="ponerRaton('c9')" onmouseleave="quitarRaton('c9')" onclick="clicar('c9')"></div>
+                <div class="cuadrito" id="c7" onmouseenter="ponerRaton('c7')" onmouseleave="quitarRaton('c7')"
+                    onclick="clicar('c7')"></div>
+                <div class="cuadrito" id="c8" onmouseenter="ponerRaton('c8')" onmouseleave="quitarRaton('c8')"
+                    onclick="clicar('c8')"></div>
+                <div class="cuadrito" id="c9" onmouseenter="ponerRaton('c9')" onmouseleave="quitarRaton('c9')"
+                    onclick="clicar('c9')"></div>
             </div>
         </div>
     </div>

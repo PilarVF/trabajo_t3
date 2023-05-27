@@ -1,0 +1,357 @@
+/* María del Pilar Vaquero Fernández
+   Mayo de 2023
+   Trabajo del Tercer Trimestre de la asignatura Lenguajes de Marcas */
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(50, 50, 170);
+}
+
+a {
+    margin: 0.5em 2%;
+    padding-top: 0.2em;
+    width: 50%;
+    height: 1.9em;
+    align-content: center;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 2px 2px black;
+    cursor: pointer;
+    font-size: xx-large;
+    background-color: rgb(20, 20, 70);
+    box-shadow: 5px 5px 5px 0px black;
+    border-radius: 0.4em;
+    color: whitesmoke;
+}
+
+.activo {
+    box-shadow: 5px 5px 5px 0px black inset;
+    background-color: rgb(150, 150, 250);
+}
+
+a:visited {
+    color: whitesmoke;
+}
+
+a::before {
+    content: "🌍 ";
+}
+
+/* Modos Día y Noche */
+:root {
+    --anchoIconoModo: 50px;
+    --modoGuardado: dia;
+}
+
+h1, h2, p {
+    color: var(--colorNormal);
+}
+
+#todo {
+    color: var(--colorFuente);
+    background-color: var(--colorFondo);
+}
+
+#zonaModo {
+    position: fixed;
+    background-color: transparent;
+    top: 91px;
+    right: 0px;
+    width: var(--anchoIconoModo);
+}
+
+#dia, #noche {
+    position: fixed;
+    font-size: x-large;
+    top: 0;
+    left: 98%;
+    width: 100;
+    cursor: pointer;
+}
+
+--modoGuardado #dia { /* Se inicializa por JS según valor de variable */
+    display: none;
+}
+
+/* Nombre usuario */
+#usuario {
+    font-weight: bold;
+    height: 4%;
+    margin-left: 8px;
+    padding-top: 4px;  
+}
+
+/* Página de inicio */
+#inicio {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#contenedorImagenViajes {
+    display: flex;
+    justify-content: center;
+}
+
+#imagenViajes {
+    margin-top:15px;
+    margin-bottom: 20px;
+    height: 60vh;
+    width: 50vw;
+}
+
+/* Saludos */
+#columna {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 83.5vh;
+    width: 100vw;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#fila2 {
+    justify-content: center;
+}
+
+.cuadrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background-color: lightgreen;
+}
+
+/* Tres en Raya */
+#contenedorPadre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 80%;
+}
+
+#contenedor {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    border-color: rgb(50, 50, 170);
+    border-style: double;
+    border-width: 2px;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cuadrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 150px;
+    width: 150px;
+    border-color: rgb(150, 150, 250);
+    border-style: double;
+    border-width: 2px;
+    background-color: transparent;
+}
+
+/* Nueva York */
+ul {
+    margin-bottom: 10px;
+}
+
+#lugaresNY {
+    margin-bottom: 20px;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+#h1nyc {
+    margin-left: -13px;
+}
+
+#fraseFinal {
+    margin-left: -13px;
+}
+
+#contenedorImagenNYC {
+    display: flex;
+    justify-content: center;
+}
+
+#imagenNYC {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    height: 50vh;
+    width: 55vw;
+}
+
+#videoSinatra {
+    display: flex;
+    justify-content: center;
+}
+
+#contenedorCancion {
+    display: flex;
+    justify-content: center;
+}
+
+#cancionSinatra {
+    margin: 0;
+    padding: 0;
+    align-content: center;
+    text-align: center;
+    font-size: medium;
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+    text-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+#cancionSinatra:visited {
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+    color: blueviolet;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#cancionSinatra::before {
+    content: none;
+}
+
+/* Ajustes */
+#lblNombre {
+    margin-left: 4px;
+}
+
+#contenedorAjustes {
+    justify-content: center;
+    margin-top: 4%;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+#botonAjustes {
+    font-size: large;
+}
+
+.nombreAjustes {
+    margin-top: 15px;
+    margin-right: 2.5px;
+    font-size: large;
+    font-style: italic;
+}
+
+#contenedorImagenViajeros {
+    display: flex;
+    justify-content: center;
+    padding-top: 3.5%;
+}
+
+#imagenViajeros {
+    height: 46vh;
+    width: 40vw;
+}
+
+/* Ventana modal */
+.ventanaModal {
+    display: flex;
+    position: fixed;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    width: 40%;
+    color: rgb(10, 10, 64);
+    background-color: rgb(204, 204, 246);
+    z-index: 1;
+    opacity: 0.9;
+    transition: all 0.2s;
+}
+
+.ventanaModal p {
+    text-align: left;
+}
+
+.ventanaModal:target {
+    visibility: visible;
+}
+
+.cerrar-modal {
+    display: table;
+    font-size: medium;
+    text-transform: uppercase;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover {
+    background-color: rgb(150, 150, 250);
+}
+
+.cerrar-modal:before {
+    content: none;
+}
+
+.boton {
+    cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        flex: 50%;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    a {
+        font-size: large;
+    }
+}

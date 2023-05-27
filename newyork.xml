@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="cancion.xsl"?>
+<cancion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="newyork.xsd">
+	<titulo>New York, New York</titulo>
+	<autor>Frank Sinatra</autor>
+	<letra>
+		<estrofa>
+			<tipo>normal</tipo>
+			<verso>Start spreading the news</verso>
+			<verso>I'm leaving today</verso>
+			<verso>I want to be a part of it</verso>
+			<verso>New York, New York</verso>			
+		</estrofa>
+		<estrofa>
+			<tipo>normal</tipo>
+			<verso>These vagabond shoes</verso>
+			<verso>They are longing to stray</verso>
+			<verso>Right through the very heart of it</verso>
+			<verso>New York, New York</verso>			
+		</estrofa>
+		<estrofa>
+			<tipo>normal</tipo>
+			<verso>I want to wake up in a city</verso>
+			<verso>That never sleeps</verso>
+			<verso>And find I'm king of the hill</verso>
+			<verso>Top of the heap</verso>			
+		</estrofa>
+		<estrofa>
+			<tipo>normal</tipo>
+			<verso>These small town blues</verso>
+			<verso>They are melting away</verso>
+			<verso>I'll make a brand new start of it</verso>
+			<verso>In old New York</verso>			
+		</estrofa>
+		<estrofa>
+			<tipo>estribillo</tipo>
+			<verso>If I can make it there</verso>
+			<verso>I'll make it anywhere</verso>
+			<verso>It's up to you</verso>
+			<verso>New York, New York</verso>
+		</estrofa>
+		<estrofa>
+			<tipo>normal</tipo>
+			<verso>New York, New York</verso>
+			<verso>I want to wake up in a city</verso>	
+			<verso>That doesn't sleep</verso>	
+			<verso>And find that I'm number one</verso>
+			<verso>Top of the list</verso>		
+			<verso>Head of the heap</verso>
+			<verso>King of the hill</verso>	
+		</estrofa>
+		<estrofa>
+			<tipo>normal</tipo>
+			<verso>These little town blues</verso>
+			<verso>They've all melted away</verso>	
+			<verso>I'm gonna make a brand new start of it</verso>	
+			<verso>In old New York</verso>		
+		</estrofa>
+		<estrofa>
+			<tipo>estribillo</tipo>
+			<verso>And</verso>
+			<verso>If I can make it there</verso>
+			<verso>I'll make it practically anywhere</verso>
+			<verso>It's up to you</verso>
+			<verso>New York, New York</verso>
+			<verso>New York</verso>
+		</estrofa>
+	</letra>
+</cancion>

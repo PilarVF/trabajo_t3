@@ -10,24 +10,71 @@ Trabajo del Tercer Trimestre de la asignatura Lenguajes de Marcas
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./saludos.css"/>
+    <link rel="stylesheet" href="./style.css"/>
     <title>Hello there!</title>
 </head>
 
-<body>
+<body id="todo">
+    <!-- Menú -->
+    <nav>
+        <a href="./index.html">Inicio</a>
+        <a class="activo" href="./saludos.html">Saludos</a>
+        <a href="./ta-te-ti.html">TA-TE-TI</a>
+        <a href="./nyc.html">NYC</a>
+        <a href="./ajustes.html">Ajustes</a>
+        <a class="boton" href="#mostrar-modal">+INFO</a>
+    </nav>
+
+    <!-- Ventana modal -->
+    <div id="mostrar-modal" class="ventanaModal">
+        <div>
+            <div>
+                <p><b>Alumna: </b>María del Pilar Vaquero Fernández</p>
+                <p><b>Curso: </b>1º DAM</p>
+                <p><b>Información sobre el proyecto: </b></p>
+                <p>Sitio web que consta de cinco páginas: Inicio, Saludos,
+                    TA-TE-TI, NYC y Ajustes. En todas ellas, arriba a la derecha, aparece un emoticono para cambiar a
+                    modo "día" (sol) o "noche" (luna). El modo seleccionado se mantiene al recargar la página.</p>
+                <p>Las páginas Saludos y TA-TE-TI contienen ejercicios que hemos realizado durante el tercer trimestre
+                    del curso.</p>
+                <p>En la página NYC, debajo del vídeo de Frank Sinatra, hay un enlace que lleva a un XML que contiene la
+                    letra de la canción "New York, New York".</p>
+                <p>Por último, en la página Ajustes, se puede introducir un nombre de usuario y guardarlo. Al hacerlo,
+                    en lugar de "Sin identificar", aparecerá debajo del menú, en todas las páginas, un saludo con ese
+                    nombre que permanecerá mientras siga abierta la sesión.</p>
+            </div>
+
+            <a class="cerrar-modal" href="">CERRAR</a>
+        </div>
+    </div>
+
+    <!-- Modos Día y Noche -->
+    <div id="zonaModo">
+        <p id="noche" onclick="ponerModoNoche()">🌜</p>
+        <p id="dia" onclick="ponerModoDia()">🌞</p>
+    </div>
+
+    <script src="./dia-noche.js"></script>
+
+    <!-- Nombre usuario -->
+    <div id="usuario">Sin identificar</div>
+
+    <script src="formulario.js"></script>
+
+    <!-- Saludos -->
     <div id="columna">
         <div class="fila" id="fila1">
-            <div class="cuadrito" id="c1" onclick="saludar('c1')">c1</div>
-            <div class="cuadrito" id="c2" onclick="saludar('c2')">c2</div>
+            <div class="cuadrado" id="c1" onclick="saludar('c1')">c1</div>
+            <div class="cuadrado" id="c2" onclick="saludar('c2')">c2</div>
         </div>
 
         <div class="fila" id="fila2">
-            <div class="cuadrito" id="c3" onclick="saludar('c3')">c3</div>
+            <div class="cuadrado" id="c3" onclick="saludar('c3')">c3</div>
         </div>
 
         <div class="fila" id="fila3">
-            <div class="cuadrito" id="c4" onclick="saludar('c4')">c4</div>
-            <div class="cuadrito" id="c5" onclick="saludar('c5')">c5</div>
+            <div class="cuadrado" id="c4" onclick="saludar('c4')">c4</div>
+            <div class="cuadrado" id="c5" onclick="saludar('c5')">c5</div>
         </div>
     </div>
 
